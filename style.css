@@ -1,0 +1,281 @@
+/* style.css */
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfaf5; /* Soft creamy background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* 1. Header & Navbar */
+.navbar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d35400; /* Earthy orange */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #d35400;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-auth {
+    background-color: #d35400;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Profile Dropdown Logic */
+.profile-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu li a:hover {
+    background: #f8f8f8;
+}
+
+.profile-container:hover .dropdown-menu {
+    display: block;
+}
+
+.logout {
+    border-top: 1px solid #eee;
+}
+
+/* 2. Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400?text=Fresh+Indian+Spices');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.guarantee-box {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.guarantee-box h3 {
+    color: #c0392b;
+}
+
+/* 3. Products Section */
+
+.category-name {
+    border-left: 5px solid #d35400;
+    padding-left: 10px;
+    margin: 30px 0 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product-card h4 {
+    margin: 10px 0;
+}
+
+.mrp {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.discount {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.1rem;
+}
+
+.product-card select {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 10px;
+    background: #f39c12;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-btn:hover {
+    background: #e67e22;
+}
+
+/* 4. Bulk Section */
+.bulk-section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.note {
+    font-style: italic;
+    margin-top: 10px;
+    color: #bdc3c7;
+}
+
+/* 5. Spices Section */
+.spice-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.spice-group {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-top: 4px solid #d35400;
+    border-radius: 4px;
+}
+
+.spice-item {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+/* 6. Delivery Section */
+.delivery-info {
+    background-color: #ecf0f1;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 8px;
+}
+
+/* 7. Footer & Contact */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 40px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.bottom-bar {
+    background: #1a252f;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links on small screens for simplicity */
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
